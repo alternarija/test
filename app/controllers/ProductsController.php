@@ -1,9 +1,19 @@
 <?php 
 namespace App\Controllers;
 
-class ProductsController{
+use App\Controllers\MainController;
+use App\Models\Product;
+
+class ProductsController extends MainController
+{
 
     public function show(){
-        echo 'products';
+
+        $products = Product::get("ORDER BY id DESC LIMIT 9");
+        //var_dump($products); exit;
+        $var = ['products' => $products]; //variable for view
+
+        $this->getView(false, 'products' ,$var);
+        
     }
 }

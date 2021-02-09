@@ -1,9 +1,12 @@
 <?php 
 namespace App\Controllers;
 
-class CommentsController{
+use App\Controllers\MainController;
+
+class CommentsController extends MainController{
 
     public function show(){
+        
         echo 'comments';
     }
 }

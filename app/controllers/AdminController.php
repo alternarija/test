@@ -1,9 +1,13 @@
 <?php 
 namespace App\Controllers;
 
-class AdminController{
+use App\Controllers\MainController;
+
+class AdminController extends MainController
+{
 
     public function show(){
+        
         echo 'admin';
     }
 }
