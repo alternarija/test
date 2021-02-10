@@ -4,7 +4,7 @@ namespace App\Library;
 class View
 {
 
-    public static function render($admin, $view, $var = array()){
+    public static function render($view, $var = array()){
 
         if(count($var) > 0){
 
@@ -16,15 +16,15 @@ class View
             }
         }
 
-        $view_path = ($admin) ? VIEW_ADMIN_PATH : VIEW_MASTER_PATH;
+        //$view_path = ($admin) ? VIEW_ADMIN_PATH : VIEW_MASTER_PATH;
 
         
 
-        if(file_exists($view_path . $view . ".php")){
+        if(file_exists(VIEW_PATH . $view . ".php")){
 
            
 
-            require_once $view_path . $view . ".php"; //include view
+            require_once VIEW_PATH . $view . ".php"; //include view
 
          
 

@@ -3,15 +3,15 @@ namespace App\Controllers;
 
 use App\Library\View;
 
-abstract class MainController
+class MainController
 {
 
-    public function getView($admin = false, $view, $var = []){
+    public function getView($view, $var = []){
 
         
         try{
 
-            View::render($admin, $view, $var);
+            View::render($view, $var);
 
         }catch(\Exception $e){
             
@@ -19,6 +19,10 @@ abstract class MainController
             
 
         }
+    }
+
+    public function show(){
+        
     }
 
     public function error(){

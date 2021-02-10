@@ -1,5 +1,5 @@
 <?php
-require_once(MASTER_INC_PATH . "header.php");
+require_once(VIEW_PATH . "master/inc/header.php");
 ?>
 <div id = "main">
     
@@ -12,7 +12,7 @@ require_once(MASTER_INC_PATH . "header.php");
             
                 <div class = "product-item">
                     <div class = "product-title"><?php echo $product->title; ?></div>
-                    <div class = "product-img"><img src="resources/img/<?php echo $product->image; ?>" ></div>  
+                    <div class = "product-img"><img src="<?php echo APP_URL  . '/resources/img/' . $product->image; ?>" ></div>  
                     <div class = "product-desc"><?php echo $product->description; ?></div>
                 </div>
 
@@ -44,7 +44,7 @@ require_once(MASTER_INC_PATH . "header.php");
             <div id = "comment-form">
                 <h4>Leave your comment</h4>
                 <p class = "validate"></p>
-                <form method="post" action="comments/store">
+                <form method="post" action="<?php echo APP_URL  . '/comments/store'; ?>">
                     <label for="name">Name:</label><br>
                     <input type="text" id="name" name="name"><br>
                     <label for="email">Email:</label><br>
@@ -62,5 +62,5 @@ require_once(MASTER_INC_PATH . "header.php");
 </div>
 
 <?php
-require_once(MASTER_INC_PATH . "footer.php");
+require_once(VIEW_PATH . "master/inc/footer.php");
 ?>

@@ -16,7 +16,7 @@ class ProductsController extends MainController
         
         $var = ['products' => $products, 'comments' => $comments]; //variable for view
 
-        $this->getView(false, 'products' ,$var);
+        $this->getView('master/products', $var);
         
     }
 }

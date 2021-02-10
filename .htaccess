@@ -4,7 +4,7 @@ RewriteCond %{REQUEST_FILENAME} !-d
 #route to index.php (in root folder)
 #RewriteRule ^.*$ /test/index.php [L]
 RewriteRule ^([A-Za-z0-9]+)/([A-Za-z0-9]+)$ index.php?controller=$1&method=$2 [NC]
-RewriteRule ^([A-Za-z0-9]+)$ index.php?controller=$1 [NC]
+RewriteRule ^([A-Za-z0-9]+)$ index.php?controller=$1&method=show [NC]
 
 
 Options -Indexes

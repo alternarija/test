@@ -19,20 +19,24 @@ class CommentsController extends MainController{
                 try{
                  
                     $comment->insert();
-                    header("Location: ../products");
+                    $redirect = APP_URL . "/products/show";
+                    header("Location: {$redirect}");
                     exit();
                 }
                 catch(\Exception $e){
                     // TODO redirect with vars
-                    header("Location: ../products");
+                    $redirect = APP_URL . "/products/show";
+                    header("Location: {$redirect}");
                     exit();
+                
                 }
                 
                 
             }else{
 
                 // TODO redirect with vars
-                header("Location: ../products");
+                $redirect = APP_URL . "/products/show";
+                header("Location: {$redirect}");
                 exit();
             }
             

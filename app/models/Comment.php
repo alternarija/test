@@ -14,7 +14,7 @@ class Comment extends ActiveRecord
         $this->name =  htmlspecialchars($_POST['name'],ENT_QUOTES);
         $this->email = htmlspecialchars(trim($_POST['email']),ENT_QUOTES);
         $this->comment_text = htmlspecialchars($_POST['text'],ENT_QUOTES);
-        $this->approved = 1;
+        $this->approved = 0;
        
     }
 }
