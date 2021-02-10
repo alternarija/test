@@ -5,7 +5,7 @@ require_once(MASTER_INC_PATH . "header.php");
     
     <div class = "wrapper">
         <div id = "products">
-            <h1>Bestsellers</h1>
+            <h2>Bestsellers</h2>
             <div class = "grid-container">
             <?php foreach($products as $product): ?>
 
@@ -22,9 +22,41 @@ require_once(MASTER_INC_PATH . "header.php");
             </div>
         </div>
         <div id = "comments">
-
+            
+            <h2>Comments</h2>
+            
+            <?php //var_dump($comments); exit;
+            if(count($comments) > 0):
+                foreach($comments as $comment): ?>
+                
+                    <div class = "comment">
+                        <p class = "comm-name"><?php echo $comment->name; ?></p>
+                        <p class ="comm-text"><?php echo $comment->comment_text; ?></p>
+                    </div>
+            <?php
+                endforeach;
+            else: ?>
+                <div class = "comment">
+                        <p class ="comm-text">Be the first to comment</p>
+                    </div>
+            <?php
+            endif; ?>
+            <div id = "comment-form">
+                <h4>Leave your comment</h4>
+                <p class = "validate"></p>
+                <form method="post" action="comments/store">
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name"><br>
+                    <label for="email">Email:</label><br>
+                    <input type="text" id="email" name="email"><br>
+                    <textarea name="text" placeholder="Leave your comment..."></textarea><br>
+                    <input type="submit" value="Submit" name="comment-sbt">
+                </form>
+            </div>
         </div>
+        
     </div>
+
         
     
 </div>

@@ -3,7 +3,8 @@
 	<head>
 	    <meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width">
-        <link rel='stylesheet' href='resources/css/style.css'>
+        <link rel='stylesheet' href="resources/css/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src='resources/js/init.js'></script>
 		<title>Citrus shop</title>
 	</head>

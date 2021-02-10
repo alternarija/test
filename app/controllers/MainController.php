@@ -6,7 +6,7 @@ use App\Library\View;
 abstract class MainController
 {
 
-    public function getView($admin = false, $view, $var = null){
+    public function getView($admin = false, $view, $var = []){
 
         
         try{
