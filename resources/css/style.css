@@ -230,6 +230,29 @@ a:active {
 
 }
 
+#login_form{
+	padding: 50px;
+	width: 50%;
+	margin: 10px auto;
+}
+.admin-comments {
+	margin-bottom: 20px;
+}
+.admin-comment {
+	border: 3px solid gray;
+	margin-top: 10px;
+	padding: 20px;
+	width: 50%;
+}
+.admin-comment p{
+	padding: 5px;
+	
+}
+.admin-comment p:not(:last-child) {
+	border-bottom: 1px solid gray;
+	
+}
+
 @media screen and (min-width:768px) and (max-width:1024px) {
 	
 	.wrapper {

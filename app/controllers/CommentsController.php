@@ -43,5 +43,32 @@ class CommentsController extends MainController{
         }
     }
 
+    public function approve(){
+
+        if(isset($_POST['sbt_comm'])){
+
+            $comment_id = htmlspecialchars($_POST['comm_id'],ENT_QUOTES);
+
+            $comment = Comment::getById($comment_id);
+            $comment->approved = 1;
+            try{
+                $comment->update($comment_id);
+                $redirect = APP_URL . "/admin/show";
+                    header("Location: {$redirect}");
+                    exit();
+            }catch(\Exception $e){
+                // TODO redirect with vars
+                $redirect = APP_URL . "/products/show";
+                header("Location: {$redirect}");
+                exit();
+            
+            }
+            
+
+            
+        }
+
+    }
+
 
 }
