@@ -1,5 +1,5 @@
 <?php
-require_once "app/config.php";
+require_once "config.php";
 
 use App\Library\Route;
 //use App\Controllers\Master\ProductsController;
